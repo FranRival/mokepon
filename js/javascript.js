@@ -7,15 +7,16 @@
 function seleccionarMascotaJugador(){
 
     let inputHypodoge = document.getElementById('hypodoge')
-    let inputcapipepo = document.getElementById('capipepo')
-    let inputratigueya = document.getElementById('ratigueya')
+    let inputCapipepo = document.getElementById('capipepo')
+    let inputRatigueya = document.getElementById('ratigueya')
+    let spanMascotaJugador = document.getElementById ('mascota-jugador')
 
     if (inputHypodoge.checked){
-        alert("Seleccionaste a Hypodoge")
-    }else if (inputcapipepo.checked){
-        alert("Seleccionaste a Capipepo")
-    } else if (inputratigueya.checked){
-        alert("Seleccionaste Ratigueya")
+        spanMascotaJugador.innerHTML = 'Hypodoge'
+    }else if (inputCapipepo.checked){
+        spanMascotaJugador.innerHTML = 'Capipepo'
+    } else if (inputRatigueya.checked){
+        spanMascotaJugador.innerHTML = 'Ratigueya'
     }else {
         alert ("Tienes que selecionar")
 
@@ -32,4 +33,6 @@ function iniciarJuego (){
 
 }
 
-/*saber cual de los circulos fue seleccionado*/ 
+
+//innerHTML es para leer el interior de las etiquetas HTML
+//tambien se puede modificar
