@@ -31,7 +31,31 @@ window.addEventListener('load',iniciarJuego)
 function iniciarJuego (){
      let botonMascotaJugador = document.getElementById('boton-mascota')
       botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
+
+
+      let botonFuego = document.getElementById('boton-fuego')
+      botonFuego.addEventListener('click', ataqueFuego)
+      let botonAgua = document.getElementById('boton-agua')
+      botonAgua.addEventListener('click' , ataqueAgua)
+      let botonTierra = document.getElementById('boton-tierra')
+      botonTierra.addEventListener('click', ataqueTierra)
 }
+
+function ataqueFuego (){
+    ataqueJugador='Fuego'
+    alert("Fuego")
+}
+
+function ataqueAgua (){
+    ataqueJugador='Agua'
+    alert ("agua")
+}
+
+function ataqueTierra(){
+    ataqueJugador='Tierra'
+    alert("tierra")
+}
+
 
 
 function aleatorio (min, max){
@@ -50,3 +74,7 @@ function seleccionarMascotaEnemigo(){
         spanMascotaEnemigo.innerHTML='Ratigueya'
     }
 }
+
+//variables globales
+
+let ataqueJugador
