@@ -43,18 +43,35 @@ function iniciarJuego (){
 
 function ataqueFuego (){
     ataqueJugador='Fuego'
-    alert("Fuego")
+    ataqueAleatorioEnemigo ()
 }
 
 function ataqueAgua (){
     ataqueJugador='Agua'
-    alert ("agua")
+    ataqueAleatorioEnemigo()
 }
 
 function ataqueTierra(){
     ataqueJugador='Tierra'
-    alert("tierra")
+    ataqueAleatorioEnemigo()
 }
+
+
+function ataqueAleatorioEnemigo (){
+    let ataqueAleatorio = aleatorio(1,3)
+
+    if (ataqueAleatorio == 1){
+        ataqueEnemigo = 'Fuego'
+
+    }else if (ataqueAleatorio == 2){
+        ataqueEnemigo = 'Agua'
+
+    }else if (ataqueAleatorio == 3){
+        ataqueEnemigo = 'Tierra'
+    }
+}
+
+let ataqueEnemigo
 
 
 
@@ -63,14 +80,14 @@ function aleatorio (min, max){
 }
 
 function seleccionarMascotaEnemigo(){
-    let ataqueAleatorio = aleatorio (1,3)
+    let mascotaAleatoria = aleatorio (1,3)
     let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 
-    if (ataqueAleatorio==1){
+    if (mascotaAleatoria==1){
         spanMascotaEnemigo.innerHTML='Hipodoge'
-    }else if (ataqueAleatorio==2){
+    }else if (mascotaAleatoria==2){
         spanMascotaEnemigo.innerHTML='Capipepo'
-    }else if (ataqueAleatorio==3){
+    }else if (mascotaAleatoria==3){
         spanMascotaEnemigo.innerHTML='Ratigueya'
     }
 }
