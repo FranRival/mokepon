@@ -1,7 +1,21 @@
 
+let ataqueJugador
+let ataqueEnemigo
 
 
 
+function iniciarJuego (){
+    let botonMascotaJugador = document.getElementById('boton-mascota')
+     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
+
+
+     let botonFuego = document.getElementById('boton-fuego')
+     botonFuego.addEventListener('click', ataqueFuego)
+     let botonAgua = document.getElementById('boton-agua')
+     botonAgua.addEventListener('click' , ataqueAgua)
+     let botonTierra = document.getElementById('boton-tierra')
+     botonTierra.addEventListener('click', ataqueTierra)
+}
 
 
 function seleccionarMascotaJugador(){
@@ -25,20 +39,17 @@ function seleccionarMascotaJugador(){
     
 }
 
-window.addEventListener('load',iniciarJuego)
+function seleccionarMascotaEnemigo(){
+    let mascotaAleatoria = aleatorio (1,3)
+    let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 
-
-function iniciarJuego (){
-     let botonMascotaJugador = document.getElementById('boton-mascota')
-      botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
-
-
-      let botonFuego = document.getElementById('boton-fuego')
-      botonFuego.addEventListener('click', ataqueFuego)
-      let botonAgua = document.getElementById('boton-agua')
-      botonAgua.addEventListener('click' , ataqueAgua)
-      let botonTierra = document.getElementById('boton-tierra')
-      botonTierra.addEventListener('click', ataqueTierra)
+    if (mascotaAleatoria==1){
+        spanMascotaEnemigo.innerHTML='Hipodoge'
+    }else if (mascotaAleatoria==2){
+        spanMascotaEnemigo.innerHTML='Capipepo'
+    }else if (mascotaAleatoria==3){
+        spanMascotaEnemigo.innerHTML='Ratigueya'
+    }
 }
 
 function ataqueFuego (){
@@ -72,20 +83,6 @@ function ataqueAleatorioEnemigo (){
     combate()
 }
 
-let ataqueEnemigo
-
-
-function crearMensaje (resultado){
-    let sectionMensajes = document.getElementById('mensajes')
-
-
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ', la mascota del enemigo ataco con ' + ataqueEnemigo + ' - ' + resultado
-
-    sectionMensajes.appendChild(parrafo)
-}
-
-
 function combate (){
     if(ataqueEnemigo==ataqueJugador){
         crearMensaje('Empate')
@@ -101,24 +98,38 @@ function combate (){
 }
 
 
+function crearMensaje (resultado){
+    let sectionMensajes = document.getElementById('mensajes')
+
+
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ', la mascota del enemigo ataco con ' + ataqueEnemigo + ' - ' + resultado
+
+    sectionMensajes.appendChild(parrafo)
+}
 
 function aleatorio (min, max){
     return Math.floor(Math.random()*(max-min +1)+ min)
 }
 
-function seleccionarMascotaEnemigo(){
-    let mascotaAleatoria = aleatorio (1,3)
-    let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
-
-    if (mascotaAleatoria==1){
-        spanMascotaEnemigo.innerHTML='Hipodoge'
-    }else if (mascotaAleatoria==2){
-        spanMascotaEnemigo.innerHTML='Capipepo'
-    }else if (mascotaAleatoria==3){
-        spanMascotaEnemigo.innerHTML='Ratigueya'
-    }
-}
 
 
 
-let ataqueJugador
+
+window.addEventListener('load',iniciarJuego)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
