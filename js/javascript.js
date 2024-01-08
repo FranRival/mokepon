@@ -5,6 +5,9 @@
 
 
 function seleccionarMascotaJugador(){
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque').style.display = 'block'
+
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota').style.display = 'none'
 
     let inputHypodoge = document.getElementById('hypodoge')
     let inputCapipepo = document.getElementById('capipepo')
@@ -29,6 +32,12 @@ window.addEventListener('load',iniciarJuego)
 
 
 function iniciarJuego (){
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque').style.display = 'none'
+
+    let sectionReiniciar = document.getElementById('reiniciar').style.display = 'none'
+
+
+
      let botonMascotaJugador = document.getElementById('boton-mascota')
       botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
@@ -146,6 +155,7 @@ function crearMensajeFinal (resultadoFinal){
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.disabled = true
 
+    let sectionReiniciar = document.getElementById('reiniciar').style.display = 'block'
 }
 
 
