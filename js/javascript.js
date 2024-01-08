@@ -87,18 +87,36 @@ function crearMensaje (resultado){
 
 
 function combate (){
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+    let spanVidasJugador = document.getElementById('vidas-jugador')
+
+
     if(ataqueEnemigo==ataqueJugador){
         crearMensaje('Empate')
        } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
         crearMensaje("Ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
        } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
         crearMensaje("Ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
        } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA'){
         crearMensaje("Ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML= vidasEnemigo
        }else {
         crearMensaje ("Perdiste")
+        vidasJugador --
+        spanVidasJugador.innerHTML = vidasJugador
        }
 }
+
+
+
+let vidasJugador = 3
+let vidasEnemigo = 3
+
 
 
 
@@ -122,3 +140,5 @@ function seleccionarMascotaEnemigo(){
 
 
 let ataqueJugador
+
+//contador de vidas
