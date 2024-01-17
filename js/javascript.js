@@ -2,7 +2,7 @@
 
 
 
-
+//debe el error encontrarse en el admin
 
 function seleccionarMascotaJugador(){
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque').style.display = 'block'
