@@ -2,7 +2,7 @@
 
 
 
-//debe el error encontrarse en el admin
+//no se donde esta el perro error
 
 function seleccionarMascotaJugador(){
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque').style.display = 'block'
