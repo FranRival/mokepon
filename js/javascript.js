@@ -36,9 +36,9 @@ function seleccionarMascotaJugador(){
     seleccionarMascotaEnemigo()
     
 }
-
+ 
 function seleccionarMascotaEnemigo(){
-    let mascotaAleatoria = aleatorio (1,3)
+    let mascotaAleatoria = aleatorio (1,4)
     let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 
     if (mascotaAleatoria==1){
@@ -75,7 +75,7 @@ function ataqueAleatorioEnemigo (){
     }else if (ataqueAleatorio == 2){
         ataqueEnemigo = 'Agua'
 
-    }else{
+    }else if (ataqueAleatorio == 3){
         ataqueEnemigo = 'Tierra'
     }
     combate()
@@ -83,7 +83,7 @@ function ataqueAleatorioEnemigo (){
 
 function combate (){
     if(ataqueEnemigo==ataqueJugador){
-        crearMensaje('Empate')
+        crearMensaje("Empate")
        } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
         crearMensaje("Ganaste")
        } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
