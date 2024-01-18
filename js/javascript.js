@@ -2,6 +2,8 @@
 
 
 
+//el error esta desde la funcion de ataqueAgua, ataqueFuego, ataqueTierra. En adelante. 
+//o posiblemente el error este en la funcion de combate. ya que funcionaria bien la funcion de ataque aleatorioenemigo
 
 
 function seleccionarMascotaJugador(){
