@@ -2,7 +2,7 @@
 
 
 
-//no se donde esta el perro error
+//el error esta desde la funcion de ataqueAgua, ataqueFuego, ataqueTierra. En adelante. 
 
 function seleccionarMascotaJugador(){
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque').style.display = 'block'
