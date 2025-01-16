@@ -1,5 +1,5 @@
 
-
+//volviendo a repazar alv.
 
 
 //el error esta desde la funcion de ataqueAgua, ataqueFuego, ataqueTierra. En adelante. 
